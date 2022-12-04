@@ -2,7 +2,7 @@
 title: "TwitGenZ ‑ Social Media App for Genz"
 description: " a social media app to connecting Genz and enabling Genz to share their thoughts with a larger audience."
 date: "2022-10-10"
-technology: ["Javascript", "NextJs", "Tailwind CSS", "Recoil", "Firebase v9"]
+technology: ["Javascript", "NextJs", "Tailwind CSS", "Recoil", "Firebase v9","RecoilJS", "NextAuth", "Headless Ui"]
 liveLink: "https://twit-genz.vercel.app/"
 sourceCode: "https://github.com/RafeeqSyedAmjad/TwitGenZ"
 ---
