@@ -35,10 +35,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/projects.js"
     ],
-    "/writings": [
+    "/projects/[id]": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/writings.js"
+      "static/chunks/pages/projects/[id].js"
     ]
   },
   "ampFirstPages": []
