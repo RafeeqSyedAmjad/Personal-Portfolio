@@ -385,13 +385,13 @@ const HeroData = {
         name: "Rafeeq Syed Amjad",
         profession: "Gym \uD83E\uDDBE | music \uD83C\uDFA7",
         intro: "Here is a brief introduction to Rafeeq Syed Amjad. Rafeeq enjoys working out and reading about fitness, technology, engineering, and entrepreneurship.",
-        avatar: "https://drive.google.com/file/d/1FSbYk-Mh0cdcwmrxs-8f4Rg9dYiRCjZY/view?usp=sharing"
+        avatar: "https://drive.google.com/uc?export=view&id=1FSbYk-Mh0cdcwmrxs-8f4Rg9dYiRCjZY"
     },
     professional: {
         name: "Rafeeq Syed Amjad",
         profession: "FrontEnd \uD83E\uDDD1‍\uD83D\uDCBB | Javascript \uD83D\uDFE8 | ReactJs ⚛️ | NextJs \uD83D\uDD33 ",
         intro: "Hi, I’m Rafeeq! I'm a developer. In a nutshell, I create websites and apps that help organizations address business challenges and meet their needs. My expertise lies within front-end web apps, and the main languages in my tech stack are JavaScript, ReactJs, NextJs, Redux, Typescript, Tailwind CSS and of course HTML/CSS.",
-        avatar: "https://drive.google.com/file/d/1FSbYk-Mh0cdcwmrxs-8f4Rg9dYiRCjZY/view?usp=sharing"
+        avatar: "https://drive.google.com/uc?export=view&id=1FSbYk-Mh0cdcwmrxs-8f4Rg9dYiRCjZY"
     }
 };
 const getStaticProps = async ()=>{

@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 export function Seo({
   title = "Rafeeq Syed Amjad",
   description = "Rafeeq's personal website",
-  image = "https://drive.google.com/file/d/1FSbYk-Mh0cdcwmrxs-8f4Rg9dYiRCjZY/view?usp=sharing",
+  image = "https://drive.google.com/uc?export=view&id=1FSbYk-Mh0cdcwmrxs-8f4Rg9dYiRCjZY",
   url = "https://rafeeq.vercel.app/",
 }) {
   return (

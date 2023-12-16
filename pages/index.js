@@ -302,14 +302,14 @@ const HeroData = {
     name: "Rafeeq Syed Amjad",
     profession: "Gym 🦾 | music 🎧",
     intro: "Here is a brief introduction to Rafeeq Syed Amjad. Rafeeq enjoys working out and reading about fitness, technology, engineering, and entrepreneurship.",
-    avatar: "https://drive.google.com/file/d/1FSbYk-Mh0cdcwmrxs-8f4Rg9dYiRCjZY/view?usp=sharing",
+    avatar: "https://drive.google.com/uc?export=view&id=1FSbYk-Mh0cdcwmrxs-8f4Rg9dYiRCjZY",
   },
   professional: {
     name: "Rafeeq Syed Amjad",
     profession: "FrontEnd 🧑‍💻 | Javascript 🟨 | ReactJs ⚛️ | NextJs 🔳 ",
     intro:
       "Hi, I’m Rafeeq! I'm a developer. In a nutshell, I create websites and apps that help organizations address business challenges and meet their needs. My expertise lies within front-end web apps, and the main languages in my tech stack are JavaScript, ReactJs, NextJs, Redux, Typescript, Tailwind CSS and of course HTML/CSS.",
-    avatar: "https://drive.google.com/file/d/1FSbYk-Mh0cdcwmrxs-8f4Rg9dYiRCjZY/view?usp=sharing",
+    avatar: "https://drive.google.com/uc?export=view&id=1FSbYk-Mh0cdcwmrxs-8f4Rg9dYiRCjZY",
   },
 };
 
