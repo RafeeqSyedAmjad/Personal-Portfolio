@@ -4,8 +4,8 @@ import { Helmet } from "react-helmet";
 export function Seo({
   title = "Rafeeq Syed Amjad",
   description = "Rafeeq's personal website",
-  image = "https://www.linkpicture.com/q/marriage_profilepic.jpg",
-  url = "https://www.mobashirfarhan.vercel.app",
+  image = "https://drive.google.com/file/d/1FSbYk-Mh0cdcwmrxs-8f4Rg9dYiRCjZY/view?usp=sharing",
+  url = "https://rafeeq.vercel.app/",
 }) {
   return (
     <Helmet>

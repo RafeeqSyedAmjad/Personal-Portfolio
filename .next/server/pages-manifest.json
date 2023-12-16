@@ -1,6 +1,13 @@
 {
   "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/projects/[id]": "pages/projects/[id].js"
+  "/api/hello": "pages/api/hello.js",
+  "/api/top-tracks": "pages/api/top-tracks.js",
+  "/_error": "pages/_error.js",
+  "/projects": "pages/projects.js",
+  "/": "pages/index.js",
+  "/writings/[id]": "pages/writings/[id].js",
+  "/writings": "pages/writings.js",
+  "/projects/[id]": "pages/projects/[id].js",
+  "/404": "pages/404.html"
 }

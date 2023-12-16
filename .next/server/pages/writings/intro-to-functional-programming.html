@@ -1,0 +1,460 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><title>Introduction to Functional Programming</title><meta name="next-head-count" content="3"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js"></script><script src="/_next/static/chunks/webpack-3433a2a2d0cf6fb6.js" defer=""></script><script src="/_next/static/chunks/framework-9b5d6ec4444c80fa.js" defer=""></script><script src="/_next/static/chunks/main-3123a443c688934f.js" defer=""></script><script src="/_next/static/chunks/pages/_app-c23cfdd736546712.js" defer=""></script><script src="/_next/static/chunks/603-b68e3691018783e9.js" defer=""></script><script src="/_next/static/chunks/pages/writings/%5Bid%5D-7a003d4c5a70ba58.js" defer=""></script><script src="/_next/static/f8E1zO0R8lM4EjfQ32t4G/_buildManifest.js" defer=""></script><script src="/_next/static/f8E1zO0R8lM4EjfQ32t4G/_ssgManifest.js" defer=""></script><style data-styled="" data-styled-version="5.3.5">html{box-sizing:border-box;font-size:16px;}/*!sc*/
+*,*:before,*:after{box-sizing:inherit;}/*!sc*/
+code{font-family:source-code-pro,Menlo,Monaco,Consolas,'Courier New', monospace;overflow:auto;width:100%;color:#141414;background-color:#e1e1e1;padding:0.1rem;border-radius:4px;}/*!sc*/
+pre{font-family:source-code-pro,Menlo,Monaco,Consolas,'Courier New', monospace;overflow:auto;width:100%;background-color:#141414;border-radius:1rem;padding:1rem;background-color:#e1e1e1;}/*!sc*/
+pre code{background-color:transparent;border:none;color:#141414;background-color:#e1e1e1;}/*!sc*/
+body{margin:0 30%;padding:0;font-family:'IBM Plex Sans',sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;background-color:#141414;color:#ffffff;}/*!sc*/
+a{color:#737581;-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+li{margin:1rem 0;}/*!sc*/
+@media (max-width:800px){body{margin:0 4%;}}/*!sc*/
+data-styled.g1[id="sc-global-kzfXrR1"]{content:"sc-global-kzfXrR1,"}/*!sc*/
+.gtsUOH{-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+data-styled.g2[id="sc-377a95d4-0"]{content:"gtsUOH,"}/*!sc*/
+.fOWbhL{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:baseline;-webkit-box-align:baseline;-ms-flex-align:baseline;align-items:baseline;padding:8px 16px;}/*!sc*/
+data-styled.g3[id="sc-9f8be8a3-0"]{content:"fOWbhL,"}/*!sc*/
+.hpiNah{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+data-styled.g4[id="sc-9f8be8a3-1"]{content:"hpiNah,"}/*!sc*/
+.ehrABq{color:#ffffff;cursor:pointer;}/*!sc*/
+data-styled.g5[id="sc-9f8be8a3-2"]{content:"ehrABq,"}/*!sc*/
+.jcyiAL{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;gap:1rem;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;color:#ffffff;list-style-type:none;}/*!sc*/
+data-styled.g6[id="sc-9f8be8a3-3"]{content:"jcyiAL,"}/*!sc*/
+.gylEnH{-webkit-text-decoration:none;text-decoration:none;color:#737581;cursor:pointer;}/*!sc*/
+data-styled.g7[id="sc-9f8be8a3-4"]{content:"gylEnH,"}/*!sc*/
+.BkSBy{border:none;cursor:pointer;background-color:#737581;color:#ffffff;font-size:1.4rem;border-radius:5px;padding:5px;}/*!sc*/
+data-styled.g8[id="sc-9f8be8a3-5"]{content:"BkSBy,"}/*!sc*/
+.iwmptC{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:8px 16px;color:#ffffff;}/*!sc*/
+data-styled.g9[id="sc-9f8be8a3-6"]{content:"iwmptC,"}/*!sc*/
+.giNlqT{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:0.5rem;}/*!sc*/
+data-styled.g10[id="sc-9f8be8a3-7"]{content:"giNlqT,"}/*!sc*/
+.dgiPSP{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:1rem;padding:0.5rem 0rem;}/*!sc*/
+data-styled.g11[id="sc-9f8be8a3-8"]{content:"dgiPSP,"}/*!sc*/
+.JkZEv{font-size:1rem;position:-webkit-sticky;position:sticky;bottom:0;}/*!sc*/
+data-styled.g12[id="sc-9f8be8a3-9"]{content:"JkZEv,"}/*!sc*/
+.UYwpB{word-wrap:break-word;}/*!sc*/
+data-styled.g13[id="sc-c8e0111d-0"]{content:"UYwpB,"}/*!sc*/
+.hULWkf{height:5px;width:0%;background-color:#b278ff;position:fixed;top:0;left:0;z-index:100;}/*!sc*/
+data-styled.g14[id="sc-c8e0111d-1"]{content:"hULWkf,"}/*!sc*/
+.fjghcr{font-size:2rem;margin:1rem 0rem;}/*!sc*/
+data-styled.g15[id="sc-c8e0111d-2"]{content:"fjghcr,"}/*!sc*/
+.cBVayb{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:1rem;margin:1rem 0rem;}/*!sc*/
+data-styled.g17[id="sc-c8e0111d-4"]{content:"cBVayb,"}/*!sc*/
+.iuRQiv{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:0.2rem;color:#737581;font-size:1rem;}/*!sc*/
+data-styled.g18[id="sc-c8e0111d-5"]{content:"iuRQiv,"}/*!sc*/
+.fMlErv{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:1rem;margin:1rem 0rem;}/*!sc*/
+@media screen and (max-width:768px){.fMlErv{display:none;}}/*!sc*/
+data-styled.g20[id="sc-c8e0111d-7"]{content:"fMlErv,"}/*!sc*/
+.jDfPFg{padding:0.5rem 1rem;border:none;border-radius:5px;background-color:#732FC6;color:#ffffff;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:0.5rem;font-size:1rem;cursor:pointer;}/*!sc*/
+data-styled.g21[id="sc-c8e0111d-8"]{content:"jDfPFg,"}/*!sc*/
+</style><style data-href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap">@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX8KVElMYYaJe8bpLHnCwDKhdTmdKZP.woff) format('woff')}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:200;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX7KVElMYYaJe8bpLHnCwDKhdTm2Idscg.woff) format('woff')}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX7KVElMYYaJe8bpLHnCwDKhdTmvIRscg.woff) format('woff')}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX-KVElMYYaJe8bpLHnCwDKhdTeEw.woff) format('woff')}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX7KVElMYYaJe8bpLHnCwDKhdTm5IVscg.woff) format('woff')}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX7KVElMYYaJe8bpLHnCwDKhdTmyIJscg.woff) format('woff')}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX7KVElMYYaJe8bpLHnCwDKhdTmrINscg.woff) format('woff')}@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:200;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX9KVElMYYaJe8bpLHnCwDKjR7_MIU.woff) format('woff')}@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX9KVElMYYaJe8bpLHnCwDKjXr8MIU.woff) format('woff')}@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYXgKVElMYYaJe8bpLHnCwDKtdU.woff) format('woff')}@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX9KVElMYYaJe8bpLHnCwDKjSL9MIU.woff) format('woff')}@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX9KVElMYYaJe8bpLHnCwDKjQ76MIU.woff) format('woff')}@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX9KVElMYYaJe8bpLHnCwDKjWr7MIU.woff) format('woff')}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX8KVElMYYaJe8bpLHnCwDKhdTmdJZGUdLBDGN9yT0.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX8KVElMYYaJe8bpLHnCwDKhdTmdJZPUdLBDGN9yT0.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX8KVElMYYaJe8bpLHnCwDKhdTmdJZIUdLBDGN9yT0.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX8KVElMYYaJe8bpLHnCwDKhdTmdJZEUdLBDGN9yT0.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX8KVElMYYaJe8bpLHnCwDKhdTmdJZFUdLBDGN9yT0.woff2) format('woff2');unicode-range:U+0100-02AF,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX8KVElMYYaJe8bpLHnCwDKhdTmdJZLUdLBDGN9.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:200;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX7KVElMYYaJe8bpLHnCwDKhdTm2Idce_fuJGl18QRY.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:200;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX7KVElMYYaJe8bpLHnCwDKhdTm2IdccvfuJGl18QRY.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:200;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX7KVElMYYaJe8bpLHnCwDKhdTm2IdcdffuJGl18QRY.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:200;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX7KVElMYYaJe8bpLHnCwDKhdTm2IdceffuJGl18QRY.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:200;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX7KVElMYYaJe8bpLHnCwDKhdTm2IdcePfuJGl18QRY.woff2) format('woff2');unicode-range:U+0100-02AF,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:200;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX7KVElMYYaJe8bpLHnCwDKhdTm2IdcdvfuJGl18Q.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX7KVElMYYaJe8bpLHnCwDKhdTmvIRce_fuJGl18QRY.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX7KVElMYYaJe8bpLHnCwDKhdTmvIRccvfuJGl18QRY.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX7KVElMYYaJe8bpLHnCwDKhdTmvIRcdffuJGl18QRY.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX7KVElMYYaJe8bpLHnCwDKhdTmvIRceffuJGl18QRY.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX7KVElMYYaJe8bpLHnCwDKhdTmvIRcePfuJGl18QRY.woff2) format('woff2');unicode-range:U+0100-02AF,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX7KVElMYYaJe8bpLHnCwDKhdTmvIRcdvfuJGl18Q.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX-KVElMYYaJe8bpLHnCwDKhdTuGqZJW9XjDlN8.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX-KVElMYYaJe8bpLHnCwDKhdTuE6ZJW9XjDlN8.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX-KVElMYYaJe8bpLHnCwDKhdTuFKZJW9XjDlN8.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX-KVElMYYaJe8bpLHnCwDKhdTuGKZJW9XjDlN8.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX-KVElMYYaJe8bpLHnCwDKhdTuGaZJW9XjDlN8.woff2) format('woff2');unicode-range:U+0100-02AF,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX-KVElMYYaJe8bpLHnCwDKhdTuF6ZJW9XjDg.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX7KVElMYYaJe8bpLHnCwDKhdTm5IVce_fuJGl18QRY.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX7KVElMYYaJe8bpLHnCwDKhdTm5IVccvfuJGl18QRY.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX7KVElMYYaJe8bpLHnCwDKhdTm5IVcdffuJGl18QRY.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX7KVElMYYaJe8bpLHnCwDKhdTm5IVceffuJGl18QRY.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX7KVElMYYaJe8bpLHnCwDKhdTm5IVcePfuJGl18QRY.woff2) format('woff2');unicode-range:U+0100-02AF,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX7KVElMYYaJe8bpLHnCwDKhdTm5IVcdvfuJGl18Q.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX7KVElMYYaJe8bpLHnCwDKhdTmyIJce_fuJGl18QRY.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX7KVElMYYaJe8bpLHnCwDKhdTmyIJccvfuJGl18QRY.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX7KVElMYYaJe8bpLHnCwDKhdTmyIJcdffuJGl18QRY.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX7KVElMYYaJe8bpLHnCwDKhdTmyIJceffuJGl18QRY.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX7KVElMYYaJe8bpLHnCwDKhdTmyIJcePfuJGl18QRY.woff2) format('woff2');unicode-range:U+0100-02AF,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX7KVElMYYaJe8bpLHnCwDKhdTmyIJcdvfuJGl18Q.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX7KVElMYYaJe8bpLHnCwDKhdTmrINce_fuJGl18QRY.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX7KVElMYYaJe8bpLHnCwDKhdTmrINccvfuJGl18QRY.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX7KVElMYYaJe8bpLHnCwDKhdTmrINcdffuJGl18QRY.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX7KVElMYYaJe8bpLHnCwDKhdTmrINceffuJGl18QRY.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX7KVElMYYaJe8bpLHnCwDKhdTmrINcePfuJGl18QRY.woff2) format('woff2');unicode-range:U+0100-02AF,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'IBM Plex Sans';font-style:italic;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX7KVElMYYaJe8bpLHnCwDKhdTmrINcdvfuJGl18Q.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:200;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX9KVElMYYaJe8bpLHnCwDKjR7_AIxsdP3pBmtF8A.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:200;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX9KVElMYYaJe8bpLHnCwDKjR7_AIVsdP3pBmtF8A.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:200;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX9KVElMYYaJe8bpLHnCwDKjR7_AIJsdP3pBmtF8A.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:200;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX9KVElMYYaJe8bpLHnCwDKjR7_AI5sdP3pBmtF8A.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:200;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX9KVElMYYaJe8bpLHnCwDKjR7_AI9sdP3pBmtF8A.woff2) format('woff2');unicode-range:U+0100-02AF,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:200;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX9KVElMYYaJe8bpLHnCwDKjR7_AIFsdP3pBms.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX9KVElMYYaJe8bpLHnCwDKjXr8AIxsdP3pBmtF8A.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX9KVElMYYaJe8bpLHnCwDKjXr8AIVsdP3pBmtF8A.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX9KVElMYYaJe8bpLHnCwDKjXr8AIJsdP3pBmtF8A.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX9KVElMYYaJe8bpLHnCwDKjXr8AI5sdP3pBmtF8A.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX9KVElMYYaJe8bpLHnCwDKjXr8AI9sdP3pBmtF8A.woff2) format('woff2');unicode-range:U+0100-02AF,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX9KVElMYYaJe8bpLHnCwDKjXr8AIFsdP3pBms.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYXgKVElMYYaJe8bpLHnCwDKhdzeFaxOedfTDw.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYXgKVElMYYaJe8bpLHnCwDKhdXeFaxOedfTDw.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYXgKVElMYYaJe8bpLHnCwDKhdLeFaxOedfTDw.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYXgKVElMYYaJe8bpLHnCwDKhd7eFaxOedfTDw.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYXgKVElMYYaJe8bpLHnCwDKhd_eFaxOedfTDw.woff2) format('woff2');unicode-range:U+0100-02AF,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYXgKVElMYYaJe8bpLHnCwDKhdHeFaxOedc.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX9KVElMYYaJe8bpLHnCwDKjSL9AIxsdP3pBmtF8A.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX9KVElMYYaJe8bpLHnCwDKjSL9AIVsdP3pBmtF8A.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX9KVElMYYaJe8bpLHnCwDKjSL9AIJsdP3pBmtF8A.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX9KVElMYYaJe8bpLHnCwDKjSL9AI5sdP3pBmtF8A.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX9KVElMYYaJe8bpLHnCwDKjSL9AI9sdP3pBmtF8A.woff2) format('woff2');unicode-range:U+0100-02AF,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX9KVElMYYaJe8bpLHnCwDKjSL9AIFsdP3pBms.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX9KVElMYYaJe8bpLHnCwDKjQ76AIxsdP3pBmtF8A.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX9KVElMYYaJe8bpLHnCwDKjQ76AIVsdP3pBmtF8A.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX9KVElMYYaJe8bpLHnCwDKjQ76AIJsdP3pBmtF8A.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX9KVElMYYaJe8bpLHnCwDKjQ76AI5sdP3pBmtF8A.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX9KVElMYYaJe8bpLHnCwDKjQ76AI9sdP3pBmtF8A.woff2) format('woff2');unicode-range:U+0100-02AF,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX9KVElMYYaJe8bpLHnCwDKjQ76AIFsdP3pBms.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX9KVElMYYaJe8bpLHnCwDKjWr7AIxsdP3pBmtF8A.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX9KVElMYYaJe8bpLHnCwDKjWr7AIVsdP3pBmtF8A.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX9KVElMYYaJe8bpLHnCwDKjWr7AIJsdP3pBmtF8A.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX9KVElMYYaJe8bpLHnCwDKjWr7AI5sdP3pBmtF8A.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX9KVElMYYaJe8bpLHnCwDKjWr7AI9sdP3pBmtF8A.woff2) format('woff2');unicode-range:U+0100-02AF,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX9KVElMYYaJe8bpLHnCwDKjWr7AIFsdP3pBms.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}</style></head><body><div id="__next"><header class="sc-9f8be8a3-0 fOWbhL"><div class="sc-9f8be8a3-1 hpiNah"><a class="sc-377a95d4-0 gtsUOH"><h1 class="sc-9f8be8a3-2 ehrABq">RSA.</h1></a><ul class="sc-9f8be8a3-3 jcyiAL"><li class="sc-9f8be8a3-4 gylEnH"><a class="sc-377a95d4-0 gtsUOH">Projects</a></li><li class="sc-9f8be8a3-4 gylEnH"><a class="sc-377a95d4-0 gtsUOH">Writings</a></li></ul></div><button class="sc-9f8be8a3-5 BkSBy"><svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg></button></header><main><div class="sc-c8e0111d-0 UYwpB"><div class="sc-c8e0111d-1 hULWkf"></div><article class="sc-c8e0111d-3 iJLgYM"><h1 class="sc-c8e0111d-2 fjghcr">Introduction to Functional Programming</h1><div class="sc-c8e0111d-4 cBVayb"><time dateTime="2022-05-05">May 5, 2022</time><small class="sc-c8e0111d-5 iuRQiv">15<!-- --> min read <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path></svg></small></div><div class="sc-c8e0111d-7 fMlErv"><button class="sc-c8e0111d-8 jDfPFg">Read Aloud<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm115.7 272l-176 101c-15.8 8.8-35.7-2.5-35.7-21V152c0-18.4 19.8-29.8 35.7-21l176 107c16.4 9.2 16.4 32.9 0 42z"></path></svg></button></div><div class="sc-c8e0111d-6 hmwDEd"><p>In computer science, functional programming is a programming paradigm more specifically a declarative paradigm where programs are constructed using functions and composing functions. In functional programming, functions are treated as values that can be passed to other functions as arguments. Languages support like Haskell, Clojure, Elm support functional patterns very well. Javascript, on the other hand, is not really a fully functional language however <code>functions</code> in Javascript are first-class citizens and hence we can use it to use functional programming in our code really well.</p>
+<p>Functional programming has one simple and main idea of having pure functions which basically means it only takes its input in gives output back irrespective of what having outside of the world.</p>
+<ol>
+<li>Pure functions don’t have any side effects and to know what is side-effects you can say them as the things which are done not as part of the function return value.</li>
+<li>Pure functions are deterministic.</li>
+</ol>
+<p><strong>Example of an impure function</strong></p>
+<pre><code>
+let name = "Mobashir";
+function sayHello() {
+  console.log(`Hello ${name}`);
+}
+
+sayHello(); // Mobashir
+name = "Farhan";
+sayHello(); //  Farhan
+</code></pre>
+<p><strong>Example of a pure function</strong></p>
+<pre><code>function sayHello(name) {
+  return `Hello ${name}`;
+}
+
+console.log(sayHello("Mobashir")); // Mobashir
+console.log(sayHello("Mobashir")); // Mobashir
+console.log(sayHello("Farhan")); // Farhan
+</code></pre>
+<p>In both examples, we can see the impure function gives unexpected results due to a change of name variable and hence it has some connection with the outside world, while the pure function just takes the input and gives the same output wherever we call it.</p>
+<p>When we are doing functional programming we mostly take care of the computational aspect of the program and not the side effects like making an API call or logging some data to the console or database transaction.</p>
+<p>So if we are writing a program in a functional pattern we basically remove all the side effects to the outside of the world and then the remaining part remains pure. This helps us to be a little bit more deterministic about the code and also helps us in unit testing.</p>
+<p><strong>Why Functional Programming?</strong></p>
+<ol>
+<li>Functional programs are more deterministic</li>
+<li>They are a more kind of self-documented</li>
+<li>They are easy to debug</li>
+<li>Of course, they will always be easy to unit test and help us in the removal of mocking the program and all the complicated stuff to test our code.</li>
+<li>Many folks have the notion that the functional paradigm is the best paradigm is not really the case as we know in computer science there is always a tradeoff and we will look at that as we go ahead.</li>
+<li>Functional programming can be good in a lot of cases like data transformation, or we want to really be certain for some calculation or stuff like that, it is then a good choice.</li>
+</ol>
+<p>We should not have our goal to learn functional programming and tend to look smart instead we should learn it in a deeper way which will help us to figure out how to write our code in a more efficient and self-documented way in which we test, debug and ship easily.</p>
+<h3>What should we keep in mind while doing functional programming</h3>
+<ol>
+<li>We should do everything with the help of functions.</li>
+<li>We thinking about writing our program instead of thinking about what my program will do we should think of what my program will take and what it will give back.</li>
+<li>Functional programming works well with strongly typed data and functions</li>
+<li>Example of imperative style</li>
+</ol>
+<pre><code>// imperative style
+let name = "John";
+let score = 5;
+
+console.log(`${name} scored ${score}`); // John scored 5
+score = 10;
+console.log(`${name} scored ${score}`); // John scored 10
+</code></pre>
+<p>In the above example, we cannot directly tell what are the input here and what are the outputs and we have to see all the imperative commands to actually know the result. However, in the example below let have a look at a more functional approach</p>
+<pre><code>// functional way
+function nameAndScore(name, score) {
+  return `${name} score ${score}`;
+}
+
+console.log(nameAndScore("Naresh", 10)); // Naresh scored 10
+console.log(nameAndScore("Ali", 7)); //  Ali scored 7
+</code></pre>
+<p>In the example above we can easily predict the input as well as the output of the program due to these pure functions.</p>
+<h3>Recursion</h3>
+<p>Now we will look at the importance of recursion in functional programming and how it help us to stay out of using loop in our program and being more imperative</p>
+<p>In the recursive approach, we will be calling the function from within itself. Here instead of handling state, we will just keep in mind the input that is going in the function and the output going out of the function.</p>
+<blockquote>
+<p>Iteration doesn’t really go well with functional programming and hence while doing functional programming we should think more about the recursive approach</p>
+</blockquote>
+<p>Let’s compare a function with an iterative approach as well as a recursive approach</p>
+<p><strong>Iterative approach</strong></p>
+<pre><code>// iterative approach
+function sum(arrayOfNums) {
+  let sumTotal = 0;
+  for (let i = 0; i &#x3C; arrayOfNums.length; i++) {
+    sumTotal += arrayOfNums[i];
+  }
+  return sumTotal;
+}
+
+console.log(sum([1, 2, 3, 4, 5])); // 15
+</code></pre>
+<p><strong>Recursive approach</strong></p>
+<pre><code>// recursive approach
+function sum(arrayOfNums) {
+  if (arrayOfNums.length === 1) {
+    // base case
+    return arrayOfNums[0];
+  } else {
+    // recursive function
+    return arrayOfNums[0] + sum(arrayOfNums.slice(1));
+  }
+}
+
+console.log(sum([1, 2, 3, 4, 5])); // 15
+</code></pre>
+<p>While writing recursive functions we should keep two things in our mind:</p>
+<ol>
+<li>Base Case: In our code the if block is the base case</li>
+<li>Recursive Case: The else block is the recursive case</li>
+<li>Recursion doesn’t ensure the function is a pure function.</li>
+</ol>
+<p><strong>Let’s take another example of the recursive approach and iterative approach</strong></p>
+<p>Iterative Fibonacci Sum</p>
+<pre><code>// recursive approach
+function iterativeFibonacci(n) {
+  if (n === 0) {
+    return 0;
+  }
+  if (n === 1) {
+    return 1;
+  }
+  let previous = 0;
+  let current = 1;
+  for (let i = n; i > 1; i--) {
+    let next = previous + current;
+    previous = current;
+    current = next;
+  }
+  return current;
+}
+
+console.log(iterativeFibonacci(10)); // 55
+</code></pre>
+<p>Recursive fibonacci sum</p>
+<pre><code>// recursive approach
+function recursiveFibonacci(n) {
+  if (n === 0) {
+    return 0;
+  }
+  if (n === 1) {
+    return 1;
+  }
+  return recursiveFibonacci(n - 2) + recursiveFibonacci(n - 1);
+}
+
+console.log(recursiveFibonacci(10));
+</code></pre>
+<p><strong>Problems with recursion</strong></p>
+<ol>
+<li>Many times we do the same calculation over and over again and the solution to this is memoization.</li>
+<li>The second problem is the stack overflow when calling the recursive function with very large number like in Fibonacci and the solution to that is tail call recursion. It is a thing in js runtime that if we write our recursive function in a particular way it does optimization for us.</li>
+<li>When doing recursion we are playing with call stack and hence debugging it is a little bit complicated.</li>
+<li>Only safari supports tail call optimization properly. Chrome and V8 don’t.</li>
+</ol>
+<h3>Higher Order Function <code>map</code>,<code>filter</code>,<code>reduce</code></h3>
+<p>Javascript has a first-class function which means we can pass a function as the arguments to other functions.</p>
+<p>Higher order functions are the functions that take in other functions as input. We will use higher-order functions more while working with functional programming in javascript. They are also the alternative to loop</p>
+<p>All these <code>map</code>,<code>filer</code>,<code>reduce</code> are array methods and they work on the array.</p>
+<ol>
+<li>Filter filters something from an array base on some condition.</li>
+<li>Map takes an array and do some operation and then returns the operated array.</li>
+<li>Reduce take an array and reduce it to one single value or some accumulated value.</li>
+</ol>
+<p><strong>Let's learn more about these functions:</strong></p>
+<ol>
+<li>Map and filter don’t mutate the array and can be called a pure function but your callback doesn’t ensure to be a pure function and it can have impurities.</li>
+</ol>
+<h3>Filter</h3>
+<p>let us write our own basic filter function.</p>
+<pre><code>function myFilter(array, cb) {
+  let returnArr = [];
+  array.forEach((item) => {
+    if (cb(item)) {
+      returnArr.push(item);
+    }
+  });
+  return returnArr;
+}
+
+function isEven(item) {
+  if (item % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function isGreaterThan5(item) {
+  if (item > 5) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(myFilter([1, 2, 3, 4, 5, 6], isEven)); // [2,4,6]
+console.log(myFilter([1, 2, 3, 4, 5, 6], isGreaterThan5)); // [6]
+</code></pre>
+<p>Appraoch : Here we have followed these steps while creating the filter function</p>
+<ul>
+<li>First we made a function that will take an array and a callback function as arguments</li>
+<li>Then we make an empty array and returned it. This helps our data to be immutable</li>
+<li>Then we start looping through the array and checked it the return value from calling our callback function taking every item of the array as the arguments return true or false. If the result is true we pushed them into oor return array else we did nothing.</li>
+<li>This way we have made our own filter function.</li>
+</ul>
+<h3>Map</h3>
+<p>Let us write our own mapping function similar to <code>Array.map()</code></p>
+<pre><code>function myMap(array, cb) {
+  let returnArr = [];
+  array.forEach((item) => {
+    returnArr.push(cb(item));
+  });
+  return returnArr;
+}
+
+let myArray = [1, 2, 3, 4];
+
+function doubleItem(item) {
+  return item * 2;
+}
+console.log(myArray); // [1,2,3,4]
+console.log(myMap(myArray, doubleItem)); // [2,4,6,8]
+console.log(myArray); // [1,2,3,4]
+</code></pre>
+<p>Approach: We have followed the following steps while writing our own mapping function</p>
+<ul>
+<li>As we know map returns the same length array after doing some operation on the array and also doesn’t mutate the array.</li>
+<li>So the first step I have taken is to define our function which will take two arguments namely <code>array</code> and <code>callback function</code> .</li>
+<li>Then we declare an empty array and return the same array. This ensures immutability.</li>
+<li>Then we loop through every item of the array that will be passed as an argument and we keep pushing the return value of the callback function being called with the item to the return array.</li>
+</ul>
+<h3>Reduce</h3>
+<p>Let us write our own mapping function similar to <code>Array.reduce()</code></p>
+<pre><code>function myReduce(array, cb, initialValue) {
+  let accumulator = initialValue;
+  array.forEach((item) => {
+    accumulator = cb(accumulator, item);
+  });
+  return accumulator;
+}
+
+let myArray = [1, 2, 3, 4, 5];
+
+let sum = myReduce(myArray, (acc, item) => acc + item, 0);
+console.log(sum); // 15
+let product = myReduce(myArray, (acc, item) => acc * item, 1);
+console.log(product); // 120
+</code></pre>
+<p>Approach : We have followed the following steps while writing our own reduced function</p>
+<ul>
+<li>First, as we know reduce combine our array and reduce it on the basis of the reducer function being passed.</li>
+<li>The first step we took is defining our function which will take an array, a callback function, and an initial value.</li>
+<li>Then we made a local variable inside and assigned it to the value being passed as initialValue to the value of the accumulator.</li>
+<li>Then we loop over the array and keep assigning the accumulator to the value that came back as the return after calling the callback function with arguments as the accumulator and the item from the array.</li>
+<li>Finally, we return the accumulator</li>
+</ul>
+<h3>Closure</h3>
+<p>Closure is one of the things which is very handy in functional programming. As we use higher order function it basically takes some input and returns output according to that. However, within the body of the function, we can also define another function and we can define it’s own value and variable inside it. And when we define inner function it has the access to the variable from the outer function. And when we return the inner function from the outer function an interesting thing happens which let us remember the value of the outer function if we call the inner function. This helps us to not pollute the global execution context. That’s a lot of words I think. Let’s learn the same through the code.</p>
+<p><strong>Question:</strong> Write a function which when called for the first three times returns “Hello World”and in the fourth call return “Call limit reached”.</p>
+<p><strong>Approach 1:</strong> Using a global variable</p>
+<pre><code>let functionCallCount = 1;
+function sayHelloTillThreeTimes() {
+  if (functionCallCount &#x3C;= 3) {
+    functionCallCount += 1;
+    return "Hello World";
+  } else {
+    return "Call Limit Reached";
+  }
+}
+
+// calling the function
+console.log(sayHelloTillThreeTimes()); // Hello World
+console.log(sayHelloTillThreeTimes()); // Hello World
+console.log(sayHelloTillThreeTimes()); // Hello World
+console.log(sayHelloTillThreeTimes()); // Call Limit Reached
+</code></pre>
+<p>In the above, we have made the program work using the global variable which is not a good practice and we are polluting the global environment. So what we should do?</p>
+<p><strong>Approach 2:</strong> Not using the global variable</p>
+<pre><code>// not using global variable
+function sayHelloThreeTimes() {
+  let functionCallCount = 0;
+  return function inner() {
+    functionCallCount += 1;
+    if (functionCallCount &#x3C;= 3) {
+      return "Hello World";
+    } else {
+      return "Call Limit Reached";
+    }
+  };
+}
+
+let useSayHelloThreeTimes = sayHelloThreeTimes();
+
+// calling the function
+console.log(useSayHelloThreeTimes()); // Hello World
+console.log(useSayHelloThreeTimes()); // Hello World
+console.log(useSayHelloThreeTimes()); // Hello World
+console.log(useSayHelloThreeTimes()); // Call Limit Reached
+</code></pre>
+<ul>
+<li>In the above example, we make an outer function and then initialize a count variable name inside of it.</li>
+<li>Then we have returned a function from that outer function in which we are checking the count variable and returning the value according to it.</li>
+<li>Now when we use the function then we have the access to the count variable when we call our function elsewhere and we can say after 3rd call it started returning “Call Limit Reached”</li>
+<li>This is what we call closure in javascript because javascript is lexically scoped</li>
+</ul>
+<h3>Partial Application and Currying</h3>
+<p>Partial application is the notion of remembering some arguments of a function helping us to make reuse easily.</p>
+<p>Currying is basically making a multi-arguments function into a series of single-argument functions.</p>
+<p>Let’s look at some code to get a more clear understanding</p>
+<pre><code>// normal function
+function greet(greetWord, name) {
+  return `${greetWord} ${name}`;
+}
+
+let greetInEnglish = greet("Hello", "John");
+let greetItalian = greet("Ciao", "John");
+
+console.log(greetInEnglish); // Hello John
+console.log(greetItalian); // Ciao John
+</code></pre>
+<p>In the code above we have made a very basic greet function that takes in the greeting word and the name and then returns a greeting message. However, it looks very reusable but what if we want to greet 100 people in English . Then if you will look you will see we have to pass “Hello” as the greetword every time and that’s not a very good thing I think so. So how can we do better?</p>
+<p>Let’s look at another code example</p>
+<pre><code>// currying
+function greet(greetWord) {
+  return function (name) {
+    return `${greetWord} ${name}`;
+  };
+}
+
+let greetInEnglish = greet("Hello");
+// calling function
+console.log(greetInEnglish("John")); // Hello John
+console.log(greetInEnglish("Sarah")); // Hello Sarah
+
+let greetItalian = greet("Ciao");
+// calling the function
+console.log(greetItalian("John")); // Ciao John
+console.log(greetItalian("Sarah")); // Ciao Sarah
+</code></pre>
+<p>In the above example, we have made a curried greet function that takes in the greet word and returns us a function that further takes in the name and then returns the greet message.</p>
+<p>Since our curried function used the idea of closure and hence when we define our function greetEnglish it will always remember the greeting word as “Hello” and now if we want to greet a hundred people in English we can simply pass their names only. This is the idea behind currying and partial application</p>
+<h3>Function Composition</h3>
+<p>Since the idea behind functional programming is we have input coming and we have output and that output can be passed as input to other functions as well and this creates a kind of pipeline you can say.</p>
+<p>When we write our program in a functional way we look at how the data will be flowing inside our program through different functions.</p>
+<p>Here comes the idea of function composition where we take smaller functions and compose them together to get our desired output.</p>
+<p>Pipelining: Where we will make a function that takes any number of single argument functions and should return a single function representing their composition.</p>
+<pre><code>// // // ---- using recursion --- ///
+// helpers
+function length(arr) {
+  return arr.length;
+}
+
+function head(arr) {
+  return arr[0];
+}
+
+function tail(arr) {
+  return arr.slice(1);
+}
+
+function pipeline(...functions) {
+  if (length(functions) === 0) return (input) => input;
+  if (length(functions) === 1) (input) => head(functions)(input);
+  return function (input) {
+    return pipeline(...tail(functions))(head(functions)(input));
+  };
+}
+
+// helpers
+function makeLoweCase(str) {
+  return str.toLowerCase();
+}
+
+function slugify(str) {
+  return str.split("").join("-");
+}
+
+let slugit = pipeline(makeLoweCase, slugify);
+
+console.log(slugit("HelloWorld"));
+</code></pre>
+<p>In piping function together we need to keep in mind that the order matters</p>
+<p>Now let's write a pipe using reduce</p>
+<pre><code>function pipe(initialValue, ...functions) {
+  return functions.reduce((acc, item) => {
+    return item(acc);
+  }, initialValue);
+  return initialValue;
+}
+
+function makeLoweCase(str) {
+  return str.toLowerCase();
+}
+
+function slugify(str) {
+  return str.split("").join("-");
+}
+
+let slugit = pipe("Hello", makeLoweCase, slugify);
+
+console.log(slugit);
+</code></pre>
+<h3>Immutability</h3>
+<p>Immutability which means not mutating is a concept that really goes hand in hand in functional programming.</p>
+<p>How to keep avoid immutability while writing our javascript programs</p>
+<ul>
+<li>Don’t change in place instead replace</li>
+<li>Make a copy of our data and return that modified data instead of changing</li>
+<li>Use higher-order functions like map and filter to get free immutability</li>
+<li>One thing to also keep in mind is that copying data is not very efficient and if we have very big data then it can cause performance issues while copying it at different places.</li>
+<li>We can also use some libraries like ImmutableJs and Immer to ensure immutability while writing our javascript program.</li>
+</ul>
+<h3>Functional Javascript Utility</h3>
+<ol>
+<li>Lodash/FP: It is not the usual lodash , it has been implemented it in a functional programming way keeping in mind immutability and purity. Still, we need to look at the documentation before using any code to make sure all things go right.</li>
+<li>Ramda: It is one of the most popular ones and it is good for beginners</li>
+</ol>
+<p>Thanks to this</p>
+<p><a href="https://observablehq.com/collection/@anjana/functional-javascript-first-steps">https://observablehq.com/collection/@anjana/functional-javascript-first-steps</a></p>
+<p><a href="https://frontendmasters.com/courses/functional-js-fundamentals/">https://frontendmasters.com/courses/functional-js-fundamentals/</a></p>
+</div></article></div></main><footer class="sc-9f8be8a3-6 iwmptC"><div class="sc-9f8be8a3-7 giNlqT"><p class="sc-9f8be8a3-9 JkZEv">© <!-- -->2023<!-- -->, Built with<!-- --> <a href="https://nextjs.org">NextJs</a></p><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M8 256C8 119 119 8 256 8s248 111 248 248-111 248-248 248S8 393 8 256zm143.6 28.9l72.4-75.5V392c0 13.3 10.7 24 24 24h16c13.3 0 24-10.7 24-24V209.4l72.4 75.5c9.3 9.7 24.8 9.9 34.3.4l10.9-11c9.4-9.4 9.4-24.6 0-33.9L273 107.7c-9.4-9.4-24.6-9.4-33.9 0L106.3 240.4c-9.4 9.4-9.4 24.6 0 33.9l10.9 11c9.6 9.5 25.1 9.3 34.4-.4z"></path></svg></div><div class="sc-9f8be8a3-8 dgiPSP"><a href="https://twitter.com/RafeeqSyedAmjad" target="_blank" class="sc-377a95d4-0 gtsUOH"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg></a><a href="https://github.com/RafeeqSyedAmjad" target="_blank" class="sc-377a95d4-0 gtsUOH"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 480 512" height="24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"></path></svg></a><a href="mailto:rafeeqsyedamjad.com" target="_blank" class="sc-377a95d4-0 gtsUOH"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path></svg></a><a href="https://www.linkedin.com/in/RafeeqSyedAmjad/" target="_blank" class="sc-377a95d4-0 gtsUOH"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg></a></div></footer></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"postData":{"id":"intro-to-functional-programming","contentHtml":"\u003cp\u003eIn computer science, functional programming is a programming paradigm more specifically a declarative paradigm where programs are constructed using functions and composing functions. In functional programming, functions are treated as values that can be passed to other functions as arguments. Languages support like Haskell, Clojure, Elm support functional patterns very well. Javascript, on the other hand, is not really a fully functional language however \u003ccode\u003efunctions\u003c/code\u003e in Javascript are first-class citizens and hence we can use it to use functional programming in our code really well.\u003c/p\u003e\n\u003cp\u003eFunctional programming has one simple and main idea of having pure functions which basically means it only takes its input in gives output back irrespective of what having outside of the world.\u003c/p\u003e\n\u003col\u003e\n\u003cli\u003ePure functions don’t have any side effects and to know what is side-effects you can say them as the things which are done not as part of the function return value.\u003c/li\u003e\n\u003cli\u003ePure functions are deterministic.\u003c/li\u003e\n\u003c/ol\u003e\n\u003cp\u003e\u003cstrong\u003eExample of an impure function\u003c/strong\u003e\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e\r\nlet name = \"Mobashir\";\r\nfunction sayHello() {\r\n  console.log(`Hello ${name}`);\r\n}\r\n\r\nsayHello(); // Mobashir\r\nname = \"Farhan\";\r\nsayHello(); //  Farhan\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e\u003cstrong\u003eExample of a pure function\u003c/strong\u003e\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003efunction sayHello(name) {\r\n  return `Hello ${name}`;\r\n}\r\n\r\nconsole.log(sayHello(\"Mobashir\")); // Mobashir\r\nconsole.log(sayHello(\"Mobashir\")); // Mobashir\r\nconsole.log(sayHello(\"Farhan\")); // Farhan\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eIn both examples, we can see the impure function gives unexpected results due to a change of name variable and hence it has some connection with the outside world, while the pure function just takes the input and gives the same output wherever we call it.\u003c/p\u003e\n\u003cp\u003eWhen we are doing functional programming we mostly take care of the computational aspect of the program and not the side effects like making an API call or logging some data to the console or database transaction.\u003c/p\u003e\n\u003cp\u003eSo if we are writing a program in a functional pattern we basically remove all the side effects to the outside of the world and then the remaining part remains pure. This helps us to be a little bit more deterministic about the code and also helps us in unit testing.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eWhy Functional Programming?\u003c/strong\u003e\u003c/p\u003e\n\u003col\u003e\n\u003cli\u003eFunctional programs are more deterministic\u003c/li\u003e\n\u003cli\u003eThey are a more kind of self-documented\u003c/li\u003e\n\u003cli\u003eThey are easy to debug\u003c/li\u003e\n\u003cli\u003eOf course, they will always be easy to unit test and help us in the removal of mocking the program and all the complicated stuff to test our code.\u003c/li\u003e\n\u003cli\u003eMany folks have the notion that the functional paradigm is the best paradigm is not really the case as we know in computer science there is always a tradeoff and we will look at that as we go ahead.\u003c/li\u003e\n\u003cli\u003eFunctional programming can be good in a lot of cases like data transformation, or we want to really be certain for some calculation or stuff like that, it is then a good choice.\u003c/li\u003e\n\u003c/ol\u003e\n\u003cp\u003eWe should not have our goal to learn functional programming and tend to look smart instead we should learn it in a deeper way which will help us to figure out how to write our code in a more efficient and self-documented way in which we test, debug and ship easily.\u003c/p\u003e\n\u003ch3\u003eWhat should we keep in mind while doing functional programming\u003c/h3\u003e\n\u003col\u003e\n\u003cli\u003eWe should do everything with the help of functions.\u003c/li\u003e\n\u003cli\u003eWe thinking about writing our program instead of thinking about what my program will do we should think of what my program will take and what it will give back.\u003c/li\u003e\n\u003cli\u003eFunctional programming works well with strongly typed data and functions\u003c/li\u003e\n\u003cli\u003eExample of imperative style\u003c/li\u003e\n\u003c/ol\u003e\n\u003cpre\u003e\u003ccode\u003e// imperative style\r\nlet name = \"John\";\r\nlet score = 5;\r\n\r\nconsole.log(`${name} scored ${score}`); // John scored 5\r\nscore = 10;\r\nconsole.log(`${name} scored ${score}`); // John scored 10\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eIn the above example, we cannot directly tell what are the input here and what are the outputs and we have to see all the imperative commands to actually know the result. However, in the example below let have a look at a more functional approach\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e// functional way\r\nfunction nameAndScore(name, score) {\r\n  return `${name} score ${score}`;\r\n}\r\n\r\nconsole.log(nameAndScore(\"Naresh\", 10)); // Naresh scored 10\r\nconsole.log(nameAndScore(\"Ali\", 7)); //  Ali scored 7\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eIn the example above we can easily predict the input as well as the output of the program due to these pure functions.\u003c/p\u003e\n\u003ch3\u003eRecursion\u003c/h3\u003e\n\u003cp\u003eNow we will look at the importance of recursion in functional programming and how it help us to stay out of using loop in our program and being more imperative\u003c/p\u003e\n\u003cp\u003eIn the recursive approach, we will be calling the function from within itself. Here instead of handling state, we will just keep in mind the input that is going in the function and the output going out of the function.\u003c/p\u003e\n\u003cblockquote\u003e\n\u003cp\u003eIteration doesn’t really go well with functional programming and hence while doing functional programming we should think more about the recursive approach\u003c/p\u003e\n\u003c/blockquote\u003e\n\u003cp\u003eLet’s compare a function with an iterative approach as well as a recursive approach\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eIterative approach\u003c/strong\u003e\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e// iterative approach\r\nfunction sum(arrayOfNums) {\r\n  let sumTotal = 0;\r\n  for (let i = 0; i \u0026#x3C; arrayOfNums.length; i++) {\r\n    sumTotal += arrayOfNums[i];\r\n  }\r\n  return sumTotal;\r\n}\r\n\r\nconsole.log(sum([1, 2, 3, 4, 5])); // 15\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e\u003cstrong\u003eRecursive approach\u003c/strong\u003e\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e// recursive approach\r\nfunction sum(arrayOfNums) {\r\n  if (arrayOfNums.length === 1) {\r\n    // base case\r\n    return arrayOfNums[0];\r\n  } else {\r\n    // recursive function\r\n    return arrayOfNums[0] + sum(arrayOfNums.slice(1));\r\n  }\r\n}\r\n\r\nconsole.log(sum([1, 2, 3, 4, 5])); // 15\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eWhile writing recursive functions we should keep two things in our mind:\u003c/p\u003e\n\u003col\u003e\n\u003cli\u003eBase Case: In our code the if block is the base case\u003c/li\u003e\n\u003cli\u003eRecursive Case: The else block is the recursive case\u003c/li\u003e\n\u003cli\u003eRecursion doesn’t ensure the function is a pure function.\u003c/li\u003e\n\u003c/ol\u003e\n\u003cp\u003e\u003cstrong\u003eLet’s take another example of the recursive approach and iterative approach\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003eIterative Fibonacci Sum\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e// recursive approach\r\nfunction iterativeFibonacci(n) {\r\n  if (n === 0) {\r\n    return 0;\r\n  }\r\n  if (n === 1) {\r\n    return 1;\r\n  }\r\n  let previous = 0;\r\n  let current = 1;\r\n  for (let i = n; i \u003e 1; i--) {\r\n    let next = previous + current;\r\n    previous = current;\r\n    current = next;\r\n  }\r\n  return current;\r\n}\r\n\r\nconsole.log(iterativeFibonacci(10)); // 55\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eRecursive fibonacci sum\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e// recursive approach\r\nfunction recursiveFibonacci(n) {\r\n  if (n === 0) {\r\n    return 0;\r\n  }\r\n  if (n === 1) {\r\n    return 1;\r\n  }\r\n  return recursiveFibonacci(n - 2) + recursiveFibonacci(n - 1);\r\n}\r\n\r\nconsole.log(recursiveFibonacci(10));\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e\u003cstrong\u003eProblems with recursion\u003c/strong\u003e\u003c/p\u003e\n\u003col\u003e\n\u003cli\u003eMany times we do the same calculation over and over again and the solution to this is memoization.\u003c/li\u003e\n\u003cli\u003eThe second problem is the stack overflow when calling the recursive function with very large number like in Fibonacci and the solution to that is tail call recursion. It is a thing in js runtime that if we write our recursive function in a particular way it does optimization for us.\u003c/li\u003e\n\u003cli\u003eWhen doing recursion we are playing with call stack and hence debugging it is a little bit complicated.\u003c/li\u003e\n\u003cli\u003eOnly safari supports tail call optimization properly. Chrome and V8 don’t.\u003c/li\u003e\n\u003c/ol\u003e\n\u003ch3\u003eHigher Order Function \u003ccode\u003emap\u003c/code\u003e,\u003ccode\u003efilter\u003c/code\u003e,\u003ccode\u003ereduce\u003c/code\u003e\u003c/h3\u003e\n\u003cp\u003eJavascript has a first-class function which means we can pass a function as the arguments to other functions.\u003c/p\u003e\n\u003cp\u003eHigher order functions are the functions that take in other functions as input. We will use higher-order functions more while working with functional programming in javascript. They are also the alternative to loop\u003c/p\u003e\n\u003cp\u003eAll these \u003ccode\u003emap\u003c/code\u003e,\u003ccode\u003efiler\u003c/code\u003e,\u003ccode\u003ereduce\u003c/code\u003e are array methods and they work on the array.\u003c/p\u003e\n\u003col\u003e\n\u003cli\u003eFilter filters something from an array base on some condition.\u003c/li\u003e\n\u003cli\u003eMap takes an array and do some operation and then returns the operated array.\u003c/li\u003e\n\u003cli\u003eReduce take an array and reduce it to one single value or some accumulated value.\u003c/li\u003e\n\u003c/ol\u003e\n\u003cp\u003e\u003cstrong\u003eLet's learn more about these functions:\u003c/strong\u003e\u003c/p\u003e\n\u003col\u003e\n\u003cli\u003eMap and filter don’t mutate the array and can be called a pure function but your callback doesn’t ensure to be a pure function and it can have impurities.\u003c/li\u003e\n\u003c/ol\u003e\n\u003ch3\u003eFilter\u003c/h3\u003e\n\u003cp\u003elet us write our own basic filter function.\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003efunction myFilter(array, cb) {\r\n  let returnArr = [];\r\n  array.forEach((item) =\u003e {\r\n    if (cb(item)) {\r\n      returnArr.push(item);\r\n    }\r\n  });\r\n  return returnArr;\r\n}\r\n\r\nfunction isEven(item) {\r\n  if (item % 2 === 0) {\r\n    return true;\r\n  } else {\r\n    return false;\r\n  }\r\n}\r\n\r\nfunction isGreaterThan5(item) {\r\n  if (item \u003e 5) {\r\n    return true;\r\n  } else {\r\n    return false;\r\n  }\r\n}\r\n\r\nconsole.log(myFilter([1, 2, 3, 4, 5, 6], isEven)); // [2,4,6]\r\nconsole.log(myFilter([1, 2, 3, 4, 5, 6], isGreaterThan5)); // [6]\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eAppraoch : Here we have followed these steps while creating the filter function\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eFirst we made a function that will take an array and a callback function as arguments\u003c/li\u003e\n\u003cli\u003eThen we make an empty array and returned it. This helps our data to be immutable\u003c/li\u003e\n\u003cli\u003eThen we start looping through the array and checked it the return value from calling our callback function taking every item of the array as the arguments return true or false. If the result is true we pushed them into oor return array else we did nothing.\u003c/li\u003e\n\u003cli\u003eThis way we have made our own filter function.\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3\u003eMap\u003c/h3\u003e\n\u003cp\u003eLet us write our own mapping function similar to \u003ccode\u003eArray.map()\u003c/code\u003e\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003efunction myMap(array, cb) {\r\n  let returnArr = [];\r\n  array.forEach((item) =\u003e {\r\n    returnArr.push(cb(item));\r\n  });\r\n  return returnArr;\r\n}\r\n\r\nlet myArray = [1, 2, 3, 4];\r\n\r\nfunction doubleItem(item) {\r\n  return item * 2;\r\n}\r\nconsole.log(myArray); // [1,2,3,4]\r\nconsole.log(myMap(myArray, doubleItem)); // [2,4,6,8]\r\nconsole.log(myArray); // [1,2,3,4]\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eApproach: We have followed the following steps while writing our own mapping function\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eAs we know map returns the same length array after doing some operation on the array and also doesn’t mutate the array.\u003c/li\u003e\n\u003cli\u003eSo the first step I have taken is to define our function which will take two arguments namely \u003ccode\u003earray\u003c/code\u003e and \u003ccode\u003ecallback function\u003c/code\u003e .\u003c/li\u003e\n\u003cli\u003eThen we declare an empty array and return the same array. This ensures immutability.\u003c/li\u003e\n\u003cli\u003eThen we loop through every item of the array that will be passed as an argument and we keep pushing the return value of the callback function being called with the item to the return array.\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3\u003eReduce\u003c/h3\u003e\n\u003cp\u003eLet us write our own mapping function similar to \u003ccode\u003eArray.reduce()\u003c/code\u003e\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003efunction myReduce(array, cb, initialValue) {\r\n  let accumulator = initialValue;\r\n  array.forEach((item) =\u003e {\r\n    accumulator = cb(accumulator, item);\r\n  });\r\n  return accumulator;\r\n}\r\n\r\nlet myArray = [1, 2, 3, 4, 5];\r\n\r\nlet sum = myReduce(myArray, (acc, item) =\u003e acc + item, 0);\r\nconsole.log(sum); // 15\r\nlet product = myReduce(myArray, (acc, item) =\u003e acc * item, 1);\r\nconsole.log(product); // 120\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eApproach : We have followed the following steps while writing our own reduced function\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eFirst, as we know reduce combine our array and reduce it on the basis of the reducer function being passed.\u003c/li\u003e\n\u003cli\u003eThe first step we took is defining our function which will take an array, a callback function, and an initial value.\u003c/li\u003e\n\u003cli\u003eThen we made a local variable inside and assigned it to the value being passed as initialValue to the value of the accumulator.\u003c/li\u003e\n\u003cli\u003eThen we loop over the array and keep assigning the accumulator to the value that came back as the return after calling the callback function with arguments as the accumulator and the item from the array.\u003c/li\u003e\n\u003cli\u003eFinally, we return the accumulator\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3\u003eClosure\u003c/h3\u003e\n\u003cp\u003eClosure is one of the things which is very handy in functional programming. As we use higher order function it basically takes some input and returns output according to that. However, within the body of the function, we can also define another function and we can define it’s own value and variable inside it. And when we define inner function it has the access to the variable from the outer function. And when we return the inner function from the outer function an interesting thing happens which let us remember the value of the outer function if we call the inner function. This helps us to not pollute the global execution context. That’s a lot of words I think. Let’s learn the same through the code.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eQuestion:\u003c/strong\u003e Write a function which when called for the first three times returns “Hello World”and in the fourth call return “Call limit reached”.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eApproach 1:\u003c/strong\u003e Using a global variable\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003elet functionCallCount = 1;\r\nfunction sayHelloTillThreeTimes() {\r\n  if (functionCallCount \u0026#x3C;= 3) {\r\n    functionCallCount += 1;\r\n    return \"Hello World\";\r\n  } else {\r\n    return \"Call Limit Reached\";\r\n  }\r\n}\r\n\r\n// calling the function\r\nconsole.log(sayHelloTillThreeTimes()); // Hello World\r\nconsole.log(sayHelloTillThreeTimes()); // Hello World\r\nconsole.log(sayHelloTillThreeTimes()); // Hello World\r\nconsole.log(sayHelloTillThreeTimes()); // Call Limit Reached\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eIn the above, we have made the program work using the global variable which is not a good practice and we are polluting the global environment. So what we should do?\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eApproach 2:\u003c/strong\u003e Not using the global variable\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e// not using global variable\r\nfunction sayHelloThreeTimes() {\r\n  let functionCallCount = 0;\r\n  return function inner() {\r\n    functionCallCount += 1;\r\n    if (functionCallCount \u0026#x3C;= 3) {\r\n      return \"Hello World\";\r\n    } else {\r\n      return \"Call Limit Reached\";\r\n    }\r\n  };\r\n}\r\n\r\nlet useSayHelloThreeTimes = sayHelloThreeTimes();\r\n\r\n// calling the function\r\nconsole.log(useSayHelloThreeTimes()); // Hello World\r\nconsole.log(useSayHelloThreeTimes()); // Hello World\r\nconsole.log(useSayHelloThreeTimes()); // Hello World\r\nconsole.log(useSayHelloThreeTimes()); // Call Limit Reached\n\u003c/code\u003e\u003c/pre\u003e\n\u003cul\u003e\n\u003cli\u003eIn the above example, we make an outer function and then initialize a count variable name inside of it.\u003c/li\u003e\n\u003cli\u003eThen we have returned a function from that outer function in which we are checking the count variable and returning the value according to it.\u003c/li\u003e\n\u003cli\u003eNow when we use the function then we have the access to the count variable when we call our function elsewhere and we can say after 3rd call it started returning “Call Limit Reached”\u003c/li\u003e\n\u003cli\u003eThis is what we call closure in javascript because javascript is lexically scoped\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3\u003ePartial Application and Currying\u003c/h3\u003e\n\u003cp\u003ePartial application is the notion of remembering some arguments of a function helping us to make reuse easily.\u003c/p\u003e\n\u003cp\u003eCurrying is basically making a multi-arguments function into a series of single-argument functions.\u003c/p\u003e\n\u003cp\u003eLet’s look at some code to get a more clear understanding\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e// normal function\r\nfunction greet(greetWord, name) {\r\n  return `${greetWord} ${name}`;\r\n}\r\n\r\nlet greetInEnglish = greet(\"Hello\", \"John\");\r\nlet greetItalian = greet(\"Ciao\", \"John\");\r\n\r\nconsole.log(greetInEnglish); // Hello John\r\nconsole.log(greetItalian); // Ciao John\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eIn the code above we have made a very basic greet function that takes in the greeting word and the name and then returns a greeting message. However, it looks very reusable but what if we want to greet 100 people in English . Then if you will look you will see we have to pass “Hello” as the greetword every time and that’s not a very good thing I think so. So how can we do better?\u003c/p\u003e\n\u003cp\u003eLet’s look at another code example\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e// currying\r\nfunction greet(greetWord) {\r\n  return function (name) {\r\n    return `${greetWord} ${name}`;\r\n  };\r\n}\r\n\r\nlet greetInEnglish = greet(\"Hello\");\r\n// calling function\r\nconsole.log(greetInEnglish(\"John\")); // Hello John\r\nconsole.log(greetInEnglish(\"Sarah\")); // Hello Sarah\r\n\r\nlet greetItalian = greet(\"Ciao\");\r\n// calling the function\r\nconsole.log(greetItalian(\"John\")); // Ciao John\r\nconsole.log(greetItalian(\"Sarah\")); // Ciao Sarah\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eIn the above example, we have made a curried greet function that takes in the greet word and returns us a function that further takes in the name and then returns the greet message.\u003c/p\u003e\n\u003cp\u003eSince our curried function used the idea of closure and hence when we define our function greetEnglish it will always remember the greeting word as “Hello” and now if we want to greet a hundred people in English we can simply pass their names only. This is the idea behind currying and partial application\u003c/p\u003e\n\u003ch3\u003eFunction Composition\u003c/h3\u003e\n\u003cp\u003eSince the idea behind functional programming is we have input coming and we have output and that output can be passed as input to other functions as well and this creates a kind of pipeline you can say.\u003c/p\u003e\n\u003cp\u003eWhen we write our program in a functional way we look at how the data will be flowing inside our program through different functions.\u003c/p\u003e\n\u003cp\u003eHere comes the idea of function composition where we take smaller functions and compose them together to get our desired output.\u003c/p\u003e\n\u003cp\u003ePipelining: Where we will make a function that takes any number of single argument functions and should return a single function representing their composition.\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e// // // ---- using recursion --- ///\r\n// helpers\r\nfunction length(arr) {\r\n  return arr.length;\r\n}\r\n\r\nfunction head(arr) {\r\n  return arr[0];\r\n}\r\n\r\nfunction tail(arr) {\r\n  return arr.slice(1);\r\n}\r\n\r\nfunction pipeline(...functions) {\r\n  if (length(functions) === 0) return (input) =\u003e input;\r\n  if (length(functions) === 1) (input) =\u003e head(functions)(input);\r\n  return function (input) {\r\n    return pipeline(...tail(functions))(head(functions)(input));\r\n  };\r\n}\r\n\r\n// helpers\r\nfunction makeLoweCase(str) {\r\n  return str.toLowerCase();\r\n}\r\n\r\nfunction slugify(str) {\r\n  return str.split(\"\").join(\"-\");\r\n}\r\n\r\nlet slugit = pipeline(makeLoweCase, slugify);\r\n\r\nconsole.log(slugit(\"HelloWorld\"));\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eIn piping function together we need to keep in mind that the order matters\u003c/p\u003e\n\u003cp\u003eNow let's write a pipe using reduce\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003efunction pipe(initialValue, ...functions) {\r\n  return functions.reduce((acc, item) =\u003e {\r\n    return item(acc);\r\n  }, initialValue);\r\n  return initialValue;\r\n}\r\n\r\nfunction makeLoweCase(str) {\r\n  return str.toLowerCase();\r\n}\r\n\r\nfunction slugify(str) {\r\n  return str.split(\"\").join(\"-\");\r\n}\r\n\r\nlet slugit = pipe(\"Hello\", makeLoweCase, slugify);\r\n\r\nconsole.log(slugit);\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3\u003eImmutability\u003c/h3\u003e\n\u003cp\u003eImmutability which means not mutating is a concept that really goes hand in hand in functional programming.\u003c/p\u003e\n\u003cp\u003eHow to keep avoid immutability while writing our javascript programs\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eDon’t change in place instead replace\u003c/li\u003e\n\u003cli\u003eMake a copy of our data and return that modified data instead of changing\u003c/li\u003e\n\u003cli\u003eUse higher-order functions like map and filter to get free immutability\u003c/li\u003e\n\u003cli\u003eOne thing to also keep in mind is that copying data is not very efficient and if we have very big data then it can cause performance issues while copying it at different places.\u003c/li\u003e\n\u003cli\u003eWe can also use some libraries like ImmutableJs and Immer to ensure immutability while writing our javascript program.\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3\u003eFunctional Javascript Utility\u003c/h3\u003e\n\u003col\u003e\n\u003cli\u003eLodash/FP: It is not the usual lodash , it has been implemented it in a functional programming way keeping in mind immutability and purity. Still, we need to look at the documentation before using any code to make sure all things go right.\u003c/li\u003e\n\u003cli\u003eRamda: It is one of the most popular ones and it is good for beginners\u003c/li\u003e\n\u003c/ol\u003e\n\u003cp\u003eThanks to this\u003c/p\u003e\n\u003cp\u003e\u003ca href=\"https://observablehq.com/collection/@anjana/functional-javascript-first-steps\"\u003ehttps://observablehq.com/collection/@anjana/functional-javascript-first-steps\u003c/a\u003e\u003c/p\u003e\n\u003cp\u003e\u003ca href=\"https://frontendmasters.com/courses/functional-js-fundamentals/\"\u003ehttps://frontendmasters.com/courses/functional-js-fundamentals/\u003c/a\u003e\u003c/p\u003e\n","title":"Introduction to Functional Programming","description":"Functional programming is a programming paradigm that treats computation as the evaluation of mathematical functions and avoids changing-state and mutable data.","date":"2022-05-05"}},"__N_SSG":true},"page":"/writings/[id]","query":{"id":"intro-to-functional-programming"},"buildId":"f8E1zO0R8lM4EjfQ32t4G","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>
